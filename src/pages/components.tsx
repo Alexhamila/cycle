@@ -73,6 +73,33 @@ export default function ComponentsPage() {
                   You can change primary color to any Tailwind CSS colors. See
                   globals.css to change your color.
                 </p>
+
+                <button
+                  onClick={() => {
+                    fetch('/api/bike/brands', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                    });
+                  }}
+                >
+                  Add brands
+                </button>
+
+                <button
+                  onClick={() => {
+                    fetch('/api/cities', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                    });
+                  }}
+                >
+                  Get brands
+                </button>
+
                 <div className='flex flex-wrap gap-2'>
                   <select
                     name='color'
